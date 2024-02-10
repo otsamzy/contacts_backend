@@ -10,7 +10,7 @@ app.use("/api/v1/tasks", tasks);
 
 const start = async () => {
   try {
-    await connectDb(process.env.CONNT_STRG);
+    await connectDb();
     app.listen(port, console.log("app listening on port 3000"));
   } catch (error) {
     console.log(error);
